@@ -12,6 +12,18 @@ namespace Collections
         static void Main(string[] args)
         {
             //ArrayList();
+            //Collections();
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+            dictionary.Add("book","kitap");
+            dictionary.Add("table", "tablo");
+            dictionary.Add("computer", "bilgisayar");
+
+            Console.WriteLine(dictionary["book"]);
+            Console.ReadLine();
+        }
+
+        private static void Collections()
+        {
             List<string> cities = new List<string>();
             cities.Add("Ankara");
             cities.Add("İstanbul");
@@ -24,12 +36,13 @@ namespace Collections
             customers.Add(new Customer { Id = 1, firstName = "Ömer" });
             customers.Add(new Customer { Id = 2, firstName = "Serfice" });
 
-   
 
-           
+
+
             var customer1 = new Customer
             {
-                Id = 3, firstName = "Omer"
+                Id = 3,
+                firstName = "Omer"
             };
             customers.Add(customer1);
             customers.AddRange(new Customer[2]
@@ -45,7 +58,6 @@ namespace Collections
             }
             var count = customers.Count;
             Console.WriteLine("Count: {0}", count);
-            Console.ReadLine();
         }
 
         private static void ArrayList()
